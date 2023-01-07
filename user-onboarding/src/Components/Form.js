@@ -4,13 +4,13 @@ const Form =  (props) => {
     const { change, submit, errors } = props;
     const { username, email, password, tos } = props.values;
 
-    const onChange = evt => {
+    const onChange = (evt) => {
         const { name, value, checked, type } = evt.target;
         const newVal = type === 'checkbox' ? checked : value;
         change(name, newVal);
     }
 
-    const onSubmit = evt => {
+    const onSubmit = (evt) => {
         evt.prevetnDefault();
         submit();
     }
