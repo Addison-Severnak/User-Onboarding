@@ -11,7 +11,7 @@ const Form =  (props) => {
     }
 
     const onSubmit = (evt) => {
-        evt.prevetnDefault();
+        evt.preventDefault();
         submit();
     }
 
@@ -55,7 +55,7 @@ const Form =  (props) => {
                         onChange={onChange}
                     />
                 </label>
-                <input type='submit' value='Create a user!' />
+                <input id='submitBtn' type='submit' value='Create a user!' />
             </form>
         </div>
     )
